@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Практичне завдання</title>
+</head>
+<body style="background-color: linear-gradient(to bottom, red, orange, yellow, green, cyan, blue, indigo, violet);">
+  <div id="mydiv">
+    <h1>Це мій дивний divik</h1>
+    <p>Це мій параграф</ul>
+    <ul class="mylist">
+      <li>Це мій список</li>
+      <li>Це ще один список</li>
+    </ul>
+    <a href="https://24tv.ua/" target="_blank">Це моє посилання</a>
+  </div>
+
+  <script>
+    // Вибір елемента за id
+    const mydiv = document.getElementById("mydiv");
+
+    // Зміна стилю елемента
+    mydiv.style.backgroundColor = "red";
+
+    // Вибір елементів за тегом
+    const mylists = document.getElementsByTagName("ul");
+
+    // Зміна тексту елемента
+    mylists[0].textContent = "Це мій новий список";
+
+    // Вибір елементів за класом
+    const mylists2 = document.getElementsByClassName("mylist");
+
+    // Виведення інформації про елемент
+    console.log(mylists2[0]);
+
+    // Додавання обробника подій
+    mydiv.onclick = function() {
+      alert("Ви натиснули на мій дивний div");
+    };
+
+    // Навігація по документу
+    const mylist = mydiv.querySelector("ul");
+    const mylistItem = mylist.querySelector("li:nth-child(1)");
+
+    // Зміна стилю елемента
+    mylistItem.style.color = "blue";
+
+    // Виведення інформації про елемент
+    console.log(mylistItem);
+
+    // Додавання обробника подій наведення
+    mydiv.addEventListener("mouseover", function() {
+      mydiv.style.backgroundColor = "green";
+    });
+
+    // Додавання обробника подій зняття курсору
+    mydiv.addEventListener("mouseout", function() {
+      mydiv.style.backgroundColor = "blue";
+    });
+  </script>
+</body>
+</html>
+
